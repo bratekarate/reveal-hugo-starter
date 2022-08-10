@@ -1,6 +1,8 @@
 +++
 title = "Living Styleguide"
 outputs = ["Reveal"]
+[logo]
+src = "/images/itf_logo_white_bg.png"
 +++
 
 # Living Styleguide
@@ -80,7 +82,7 @@ export function App() {
 
 ## Tätigkeiten
 
-- Frontendentwicklung mit React
+- Frontendentwicklung mit React ![react logo](/images/react_logo.png)
   - Wartung und Weiterentwicklung von UI-Komponenten
   - Entwicklung neuer UI-Komponenten
   - Refaktorisierung und Vereinheitlichung alter Programmlogik zur Nutzung modernerer React-Features
@@ -89,7 +91,7 @@ export function App() {
 
 ## Tätigkeiten (2)
 
-- Tooling für die Entwicklung
+- Tooling für die Entwicklung ![tool icon](/images/tools.png)
   - Linting
   - Git Pre-commit Hooks
 
@@ -97,10 +99,10 @@ export function App() {
 
 ## Tätigkeiten (3)
 
-- Testing
+- Testing ![test icon](/images/check.png)
   - Regressionstests
   - Storybook reporting
-- CI
+- CI/CD ![ci icon](/images/infinity.png)
   - OpenShift Buildoptimierung/Bugfixing
   - Umsetzung neuer OpenShift CI-Features
     - Fail-fast
@@ -109,6 +111,8 @@ export function App() {
 {{% /section %}}
 
 ---
+
+{{% section %}}
 
 ## Technologien
 
@@ -121,6 +125,8 @@ export function App() {
 - (Stencil, Webcomponents)
 - Shell, Bash, CLI
 - Linux, OpenShift, Docker, TeamCity, nginx, CI/CD
+
+{{% section %}}
 
 {{% note %}}
 Don't forget to thank the audience.
