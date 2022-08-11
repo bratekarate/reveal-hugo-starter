@@ -190,7 +190,6 @@ export function App() {
 - (Stencil, Webcomponents)
 - Shell, Bash, CLI
 - Linux, OpenShift, Docker, TeamCity, nginx, CI/CD
-
 {{% note %}}
 - Typische Frontend-Technologien
 - Bundling: Rollup relevanter, aber Webpack teils erforderlich (Storybook, Styleguidist)
@@ -199,4 +198,4 @@ export function App() {
 - Shell, Bash, CLI, Linux: für OpenShift und Pre-Commit Hooks interessant
 {{% /note %}}
 
-{{% section %}}
+{{% /section %}}
