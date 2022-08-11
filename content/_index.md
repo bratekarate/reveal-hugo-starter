@@ -13,7 +13,7 @@ Design-Richtlinien und Komponentenbibliothek der Commerzbank
 
 {{% section %}}
 
-{{< slide background-image="/images/thinking.gif" >}}
+{{< slide id="bgimg" background-image="/images/thinking.gif" >}}
 ## Wieso?
 
 ---

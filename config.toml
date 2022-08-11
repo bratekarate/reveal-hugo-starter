@@ -16,8 +16,9 @@ mediaType = "text/html"
 isHTML = true
 
 [params.reveal_hugo]
-theme = "blood"
+#theme = "white"
 #theme = "night"
+custom_theme = "stylesheets/robot-lung.css"
 highlight_theme = "tokyo-night-dark"
 #highlight_theme = "atom-one-dark-reasonable"
 #transition = "convex"
