@@ -9,12 +9,25 @@ src = "/images/itf_logo_white_bg.png"
 
 Design-Richtlinien und Komponentenbibliothek der Commerzbank
 
+{{% note %}}
+Ich werde euch einen kurzen Einblick in das LSG Projekt geben.
+
+Design-Richtlinien...
+{{% /note %}}
+
+
 ---
 
 {{% section %}}
 
 {{< slide id="bgimg" background-image="/images/thinking.gif" >}}
 ## Wieso?
+
+{{% note %}}
+- Bevor ich darauf eingehe WAS der LSG ist:
+- Wieso gibt es den LSG?
+- Hintergründe, Existenzberechtigung
+{{% /note %}}
 
 ---
 
@@ -26,6 +39,13 @@ Design-Richtlinien und Komponentenbibliothek der Commerzbank
     - Accessability
 - **Geteiltes Know-How** statt **Inselwissen** einzelner Teams.
 
+{{% note %}}
+- Viele UI Projekte in der Bank
+- Wildwuchs muss vermieden werden
+- Qualitätsstandards sollen eingehalten werden
+- Inselwissen kann Problem werden --> geteiltes Know-How angestrebt
+{{% /note %}}
+
 {{% /section %}}
 
 ---
@@ -36,6 +56,12 @@ Design-Richtlinien und Komponentenbibliothek der Commerzbank
 
 - Der Living Styleguide (LSG) ist ein *Designsystem* zur **Vereinfachung** und **Standardisierung** der Entwicklung *webbasierter Nutzeroberflächen* innerhalb der Commerzbank.
 
+{{% note %}}
+- Aus diesen Gründen gibt es den LSG
+- Vereinfachen --> Kosten reduzieren
+- Standardisieren -> Qualitätsstandards
+{{% /note %}}
+
 ---
 
 ## Struktur
@@ -43,6 +69,12 @@ Design-Richtlinien und Komponentenbibliothek der Commerzbank
 - Sammlung von Design-Richtlinien
 - Komponentenbibliothek aus LSG-Standardkomponenten in React und HTML
 - Komponentenbibliothek wächst stetig und wird angepasst ==> System ist ein “Living” Styleguide
+
+{{% note %}}
+- Name LSG kann irreführend sein
+- "Styleguide" -> Design-Richtlinien
+- Aber: Komponentenbibliothek elementarer Bestandteil (Vereinfachung, Inselwissen)
+{{% /note %}}
 
 {{% /section %}}
 
@@ -52,6 +84,14 @@ Design-Richtlinien und Komponentenbibliothek der Commerzbank
 
 ## Beispiel
 ![coba portal](/images/portal.png)
+
+{{% note %}}
+- Homepage der Commerzbank
+- LSG-Standardkomponenten: 
+  - Productstage (Produktvorstellung, wie ein "Vorhang" verschwindet sie)
+  - Button
+- Kann in vielen Projekten eingesetzt werden
+{{% /note %}}
 
 Quelle: https://commerzbank.de
 
@@ -74,6 +114,13 @@ export function App() {
 }
 ```
 (Kein Bezug zur vorherigen Beispielseite)
+
+{{% note %}}
+- Kein Bezug zur vorherigen Beispielseite --> Nur ein fiktives, simples Beispiel
+- Typische React App mit funktionalen Components und Hooks
+- Button wird vom LSG importiert und eingesetzt
+{{% /note %}}
+
 {{% /section %}}
 
 ---
@@ -87,6 +134,12 @@ export function App() {
   - Entwicklung neuer UI-Komponenten
   - Refaktorisierung und Vereinheitlichung alter Programmlogik zur Nutzung modernerer React-Features
 
+{{% note %}}
+- Tätigkeiten sind nicht alle zwingend erforderlich, je nach eigenem Interesse und Skills
+- Sicher noch mehr Tätigkeiten relevant, dies ist meine Perspektive
+- Vornehmlich React-Entwicklung
+{{% /note %}}
+
 ---
 
 ## Tätigkeiten (2)
@@ -94,6 +147,13 @@ export function App() {
 - Tooling für die Entwicklung ![tool icon](/images/tools.png)
   - Linting
   - Git Pre-commit Hooks
+
+{{% note %}}
+- Tooling immer wieder relevant
+- Linting und Pre-Commit Hooks bereits eingebunden
+- (Hier war ich selbst viel beteiligt)
+- Aber: Es muss immer weiter optimiert und an neue Anforderungen angepasst werden.
+{{% /note %}}
 
 ---
 
@@ -107,6 +167,11 @@ export function App() {
   - Umsetzung neuer OpenShift CI-Features
     - Fail-fast
     - Konfiguration über Umgebungsvariablen
+
+{{% note %}}
+- Tests wurden kürzlich erst aktiviert, viel Verbesserungspotential.
+- CI ist derzeit "fertig", aber Anforderungen ändern sich.
+{{% /note %}}
 
 {{% /section %}}
 
@@ -126,9 +191,12 @@ export function App() {
 - Shell, Bash, CLI
 - Linux, OpenShift, Docker, TeamCity, nginx, CI/CD
 
-{{% section %}}
-
 {{% note %}}
-Don't forget to thank the audience.
+- Typische Frontend-Technologien
+- Bundling: Rollup relevanter, aber Webpack teils erforderlich (Storybook, Styleguidist)
+- lerna für Monorepo Verwaltung
+- AVA main test framework
+- Shell, Bash, CLI, Linux: für OpenShift und Pre-Commit Hooks interessant
 {{% /note %}}
 
+{{% section %}}
