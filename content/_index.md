@@ -15,13 +15,59 @@ Technische Betrachtung
 
 {{% section %}}
 
-## Aufbau
+## Problemstellung
+
+- Vertrauenswürdige Datensicherung zwischen mehreren Parteien
+
+![alt text](/images/distrust_homer.gif)
+
+---
+
+## Problemstellung
+
+- Vertrauenswürdige Datensicherung zwischen mehreren Parteien
+    - Kassenbuch (Ledger)
+    - Versorgungskette (Supply Chain)
+    - Schadensfälle bei Versicherungen
+- Anspruch: Byzantinische Fehlertoleranz
+    - Problem der byzantinischen Generäle
+    --> Konsens über die Wahrheit eines Sachverhalts
+
+---
+
+## Distributed-Ledger-Technologie (DLT)
+
+- *Verteiltes Kassenbuch*
+- Public-Key-Kryptographie: Nicht fälschbare digitale Signaturen.
+- Konsensmechanismen zur Einigung auf eine Wahrheit
+- Implementierungen: 
+    - **Blockchain**
+        - Bitcoin, Ethereum, Hyperledger Fabric
+    - **DAG** (directed acyclic Graph/gerichteter azyklischer Graph)
+        - IOTA, Hashgraph
+
+---
+
+## Blockchain-Technologie
+- Meistverbreiteste Implementierung von DLT
+- Unveränderbare Verkettung von Datensätzen in kryptografisch signierten *Datenblöcken*
+- Erstellen neuer Blöcke mittels Konsensalgorithmen
+- (Bild hier)
+
+
+{{% /section %}}
+
+---
+
+{{% section %}}
+
+## Blockaufbau
 - Blockchain: Liste von Datensätzen (Blocks)
 - Block:
   - Kryptographisches Hash des letzten Blocks (chaining)
   - Zeitstempel
   - Transaktionsdaten (i.d.R. eine Baumstruktur)
-- Jeder Block refernziert den letzten Block ==> Blöcke formen eine "Kette"
+- Jeder Block referenziert den vorherigen Block ==> Blöcke formen eine "Kette"
 - Blockchain ist unveränderbar: Blöcke können nur angehängt werden
 
 ---
@@ -38,6 +84,9 @@ Technische Betrachtung
 - Verteiltes System ==> Viele Transaktionslisten (Blockchains) existieren im Netzwerk.
 - Es muss sich automatisiert geeinigt werden, ob eine Liste integer ist.
   ==> Konsensalgorithmen
+- Verschiedene Nodes akzeptieren teils unterschiedliche Blöcke "zeitgleich"
+    - Temporärer Fork
+    - Blockchain, die als erstes weiterwächst, wird zur neuen Wahrheit
 
 ---
 
@@ -63,3 +112,32 @@ Technische Betrachtung
 - Proof-of-Stake ist weit weniger Energieaufwändig. Allerdings nocht nicht so etabliert.
 
 {{% /section %}}
+
+--- 
+
+{{% section %}}
+
+## Mining Blocks 1
+
+![alt text](/images/mining_blocks.png)
+
+---
+
+## Mining Blocks 2
+
+![alt text](/images/mining_blocks_2.png)
+
+---
+
+## Mining Blocks 3
+
+![alt text](/images/mining_blocks_3.png)
+
+{{% /section %}}
+
+---
+
+## TODO: 
+- Smart Contracts (Ethereum, Cardano live Beispiel)
+- "Orakel"
+- Hyperledger pluggable Konsens (mit Bild)
