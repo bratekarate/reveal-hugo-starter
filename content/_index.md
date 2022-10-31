@@ -208,17 +208,38 @@ src = "/images/itf_logo_white_bg.png"
 
 ![block mining 3](/images/mining_blocks_3.png)
 
+---
+
+## Hyperledger Fabric Ordering
+
+![ordering](/images/ordering.webp)
+
+## Hyperledger Fabric Ordering
+
+- Kein dedizierter Konsensmechanismus für alle Hyperledger Blockchains
+- Konsensmechanismus ist je nach Anwendungsfall konfigurierbar
+- Hyperledger Fabric Blockchains sind permissioned:
+--> Geringere Anforderungen für byzantinische Fehlertoleranz
+- Konsensalgorithmen:
+    - PoeT (BFT)
+    - Raft (CFT)
+    - Kafka (deprecated)
+
 {{% /section %}}
 
 --- 
 
 {{% section %}}
 
-## TODO: 
-- Smart Contracts (Ethereum, Cardano live Beispiel)
-- "Orakel"
-- Hyperledger pluggable Konsens (mit Bild)
-- Gefahren (51% Attack)
+## Geschäftliche Anwendung
+
+---
+
+## Smart-Contracts
+
+---
+
+## Orakel
 
 {{% /section %}}
 
