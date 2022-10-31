@@ -92,10 +92,6 @@ src = "/images/itf_logo_white_bg.png"
 
 ---
 
-## UTXO vs Account Model
-
----
-
 ## Permissioned vs permissionless
 - Blockchains können *permissioned* oder *permissionless* umgesetzt werden.
 - Permissioned Blockchain
@@ -116,6 +112,12 @@ src = "/images/itf_logo_white_bg.png"
 {{% section %}}
 
 ## Konsensalgorithmen
+
+![agreement](/images/agree2.jpg)
+
+---
+
+## Konsensalgorithmen
 - Verteiltes System ==> Viele Transaktionslisten (Blockchains) existieren im Netzwerk.
 - Es muss sich automatisiert geeinigt werden, ob eine Liste integer ist.
   ==> Konsensalgorithmen
@@ -130,6 +132,12 @@ src = "/images/itf_logo_white_bg.png"
 ---
 
 ## Proof-of-Work (PoW)
+
+![pow](/images/pow2.png)
+
+---
+
+## Proof-of-Work (PoW)
   - Absichtlich rechenaufwendige Aufgaben, um eine Transaktion zu validieren
   - Erstellen falscher Transaktionen wäre kostenaufwendig und nicht rentabel
   - Je älter ein Block ist desto schwerer umzuschreiben: Alle folgenden Blöcke müssten umgeschrieben werden.
@@ -138,11 +146,29 @@ src = "/images/itf_logo_white_bg.png"
 
 ---
 
+## Proof-of-Work (PoW)
+
+![mining rig](/images/mining_rig2.jpg)
+
+---
+
+## Proof-of-Stake (PoS)
+
+![pos](/images/pos2.png)
+
+---
+
 ## Proof-of-Stake (PoS)
   - "Validierungsknoten" ersetzen die Miner
   - Statt Rechenaufwand muss ein Anteil ("Stake") in Cryptowährung festgesetzt werden
   - Halten sich Validatoren nicht an die Regeln des Netzwerks drohen hohe Verluste
   - Es gibt also keinen Anreiz, sich nicht an die Validierungsregeln zu halten.
+
+---
+
+## Proof-of-Stake (PoS)
+
+![validator node](/images/valid_node.avif)
 
 ---
 
@@ -192,6 +218,7 @@ src = "/images/itf_logo_white_bg.png"
 - Smart Contracts (Ethereum, Cardano live Beispiel)
 - "Orakel"
 - Hyperledger pluggable Konsens (mit Bild)
+- Gefahren (51% Attack)
 
 {{% /section %}}
 
