@@ -234,6 +234,12 @@ src = "/images/itf_logo_white_bg.png"
 {{% section %}}
 
 ## Geschäftliche Anwendung
+
+![business](/images/business_crypto.jpg)
+
+---
+
+## Geschäftliche Anwendung
 - Blockchains wie Bitcoin dienen lediglich zur Transaktion digitaler Währung
 - Bezahlung von Waren und Dienstleistungen ohne Intermediär (z.B. Bank)
     - Aber: Keine Sicherheit zwischen Parteien, die sich nicht vertrauen
