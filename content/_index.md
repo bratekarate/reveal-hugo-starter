@@ -214,6 +214,8 @@ src = "/images/itf_logo_white_bg.png"
 
 ![ordering](/images/ordering.webp)
 
+---
+
 ## Hyperledger Fabric Ordering
 
 - Kein dedizierter Konsensmechanismus für alle Hyperledger Blockchains
@@ -232,15 +234,49 @@ src = "/images/itf_logo_white_bg.png"
 {{% section %}}
 
 ## Geschäftliche Anwendung
+- Blockchains wie Bitcoin dienen lediglich zur Transaktion digitaler Währung
+- Bezahlung von Waren und Dienstleistungen ohne Intermediär (z.B. Bank)
+    - Aber: Keine Sicherheit zwischen Parteien, die sich nicht vertrauen
+    - Lösung: Digitale Verträge auf der Blockchain
+
+---
+
+
+## Smart-Contracts
+
+![smart contract](/images/smart_contract.png)
 
 ---
 
 ## Smart-Contracts
+- Computerprotokolle bilden digital einen Vertrag ab
+- Vertrag liegt unveränderbar auf der Blockchain
+- Vereinbarung wird in Codezeilen definiert \
+    --> Selbstausführender Vertrag
+- Festgelegte Ereignisse ==> selbstständige Ausführung des Vertrags
+- Menschliche Überwachung überflüssig
+- Blockchains (Bsp.):
+    - Ethereum
+    - Cardano
+    - Polkadot
 
 ---
 
 ## Orakel
 
-{{% /section %}}
+![chainlink](/images/chainlink.jpeg)
 
 ---
+
+## Orakel
+
+- Limitierung von Smart Contracts: Externe Faktoren und Daten
+- Unparteiische Personen oder Institutionen werden benötigt \
+--> Orakel
+- Orakel stellen schwachstelle im Smart Contract dar: \
+Es muss vertraut werden
+- Reputationsmanagement in dezentralen Netzwerken
+    - Beispiel: Chainlink
+ 
+{{% /section %}}
+
