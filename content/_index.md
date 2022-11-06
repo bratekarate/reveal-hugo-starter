@@ -28,8 +28,8 @@ src = "/images/itf_logo_white_bg.png"
     - Versorgungskette (Supply Chain)
     - Schadensfälle bei Versicherungen
 - Anspruch: Byzantinische Fehlertoleranz
-    - Problem der byzantinischen Generäle
-    --> Konsens über die Wahrheit eines Sachverhalts
+    - Problem der byzantinischen Generäle \
+    → Konsens über die Wahrheit eines Sachverhalts
 - Vermeidung eines "Single-Point-Of-Failure"
 
 ---
@@ -64,7 +64,7 @@ src = "/images/itf_logo_white_bg.png"
 - Meistverbreiteste Implementierung von DLT
 - Unveränderbare kryptografische Verkettung von Datensätzen in signierten *Datenblöcken*
 - Vgl. *Linked List*
-- Erstellen neuer Blöcke mittels Konsensalgorithmen
+- Erstellen neuer Blöcke mittels Konsensmechanismen
 - Wie die meisten DLT: Replizierung auf Nodes im P2P-Netzwerk
 - Bei Uneinigkeit im Netzwerk entstehen "Forks" der Blockchain
 
@@ -80,7 +80,8 @@ src = "/images/itf_logo_white_bg.png"
   - Kryptographisches Hash des letzten Blocks (chaining)
   - Zeitstempel
   - Transaktionsdaten (i.d.R. eine Baumstruktur)
-- Jeder Block referenziert den vorherigen Block ==> Blöcke formen eine "Kette"
+- Jeder Block referenziert den vorherigen Block \
+→ Blöcke formen eine "Kette"
 - Blockchain ist unveränderbar: Blöcke können nur angehängt werden
 
 ---
@@ -111,16 +112,16 @@ src = "/images/itf_logo_white_bg.png"
 
 {{% section %}}
 
-## Konsensalgorithmen
+## Konsensmechanismen
 
 ![agreement](/images/agree2.jpg)
 
 ---
 
-## Konsensalgorithmen
+## Konsensmechanismen
 - Verteiltes System ==> Viele Transaktionslisten (Blockchains) existieren im Netzwerk.
-- Es muss sich automatisiert geeinigt werden, ob eine Liste integer ist.
-  ==> Konsensalgorithmen
+- Es muss sich automatisiert geeinigt werden, ob eine Liste integer ist. \
+  → Konsensmechanismen
 - Algorithmen mit Byzantine-Fault-Tolerance (BFT)
     - Permissioned (privat)
         - Proof-of-Authority (PoA)
@@ -220,8 +221,8 @@ src = "/images/itf_logo_white_bg.png"
 
 - Kein dedizierter Konsensmechanismus für alle Hyperledger Blockchains
 - Konsensmechanismus ist je nach Anwendungsfall konfigurierbar
-- Hyperledger Fabric Blockchains sind permissioned:
---> Geringere Anforderungen für byzantinische Fehlertoleranz
+- Hyperledger Fabric Blockchains sind permissioned: \
+→ Geringere Anforderungen für byzantinische Fehlertoleranz
 - Konsensalgorithmen:
     - PoeT (BFT)
     - Raft (CFT)
@@ -235,7 +236,7 @@ src = "/images/itf_logo_white_bg.png"
 
 ## Geschäftliche Anwendung
 
-![business](/images/business_crypto.jpg)
+![business](/images/business_crypto2.jpg)
 
 ---
 
@@ -258,7 +259,7 @@ src = "/images/itf_logo_white_bg.png"
 - Computerprotokolle bilden digital einen Vertrag ab
 - Vertrag liegt unveränderbar auf der Blockchain
 - Vereinbarung wird in Codezeilen definiert \
-    --> Selbstausführender Vertrag
+    → Selbstausführender Vertrag
 - Festgelegte Ereignisse ==> selbstständige Ausführung des Vertrags
 - Menschliche Überwachung überflüssig
 - Blockchains (Bsp.):
@@ -278,7 +279,7 @@ src = "/images/itf_logo_white_bg.png"
 
 - Limitierung von Smart Contracts: Externe Faktoren und Daten
 - Unparteiische Personen oder Institutionen werden benötigt \
---> Orakel
+→ Orakel
 - Orakel stellen schwachstelle im Smart Contract dar: \
 Es muss vertraut werden
 - Reputationsmanagement in dezentralen Netzwerken
