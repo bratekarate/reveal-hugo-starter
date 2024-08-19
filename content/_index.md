@@ -55,14 +55,90 @@ Referent: Felix Jian, Full Stack Engineer
 
 ---
 
-## Git what?
-<image src="/images/keanu.gif" width="800em" class="plain">
+## Git, bedeutet das nicht...?
+
+<image src="/images/git-merge.gif" width="800em" class="plain fragment">
 
 ---
 
 {{% section %}}
 
 ## Git Grundlagen
+
+---
+
+### *I’m an egotistical bastard, and I name all my projects after myself. First ‘Linux’, now ‘Git’.*
+<div style="text-align: right;">
+— Linus Torvalds
+</div>
+
+<br>
+<br>
+<br>
+
+- Kontext: "Git" bedeutet im britischen Englisch umgangssprachlich so viel wie "Blödmann".
+
+---
+
+## Der Anfang
+### Exkurs in die Historie von Git
+- Entwicklung des Linux-Kernels benötigte ein **Versionskontrollsystem** (Version Control System, ***VCS***)
+- 2002: Lösung -- Bitkeeper, ein proprietäres **verteiltes VCS** (Distributed VCS, ***DVCS***)
+- 2005: Widerrufen der Erlaubnis, Bitkeeper kostenlos zu verwenden
+- 2005: Linus Torvalds entwickelt als Lösung das DVCS Git
+
+---
+
+## Auffrischung
+### Was ist Git?
+
+- **Verteiltes** Versionsverwaltungssystem (Version Control System, *VCS*)
+- Im Gegensatz zu anderen VCS: **Schnappschüsse** (***Commits***) statt Unterschiede
+- Kernkonzept: **Lokale** Abzweigungen (*Branches*)
+    - Interaktion mit dem Server erst wenn erwünscht
+    - Lokale Branches sind leichtgewichtig
+- Zusammenführung (*Merging*) **ganzer Branches**, nicht einzelner Änderungen (*Commits*)
+    - Ausnahme: *Cherry-Picking* (dazu später mehr)
+- Hohe **Performance** durch lokale Verarbeitung
+
+---
+
+## VCS vor Git
+
+<image src="/images/vcs-deltas.png" width="800em" class="plain">
+
+Frühere VCS: Speichern der Änderungen (*Deltas*) von Dateien
+
+---
+
+## Git VCS
+
+<image src="/images/vcs-snapshots.png" width="800em" class="plain">
+
+Git: Speichern von Schnappschüssen des Dateisystems
+
+---
+
+## Git Branching
+### Git Commit Struktur
+- Commit ***Hash***
+- **Autor** des Commits
+- Zeiger auf einen **Schnappschuss** des Dateisystems
+- Zeiger auf **0..n Vorgänger**
+    - 0: Initialer Commit
+    - 1: Folgende Commits
+    - n: Commit, der aus Merge resultiert
+ 
+---
+
+## Git Branching
+### Git Commit Struktur
+
+
+ 
+---
+
+## Test
 
 - xyz
 - testas askldjaskldjaskldjaskldjaklsdjasjlkdsakljaskdasjkl lkas djkalsj askl 
