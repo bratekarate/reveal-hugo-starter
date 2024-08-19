@@ -16,14 +16,6 @@ src = "/images/itf_logo_white_bg.png"
 ## Problemstellung
 
 - Vertrauenswürdige Datensicherung zwischen mehreren Parteien
-
-![distrust homer](/images/distrust_homer.gif)
-
----
-
-## Problemstellung
-
-- Vertrauenswürdige Datensicherung zwischen mehreren Parteien
     - Kassenbuch (Ledger)
     - Versorgungskette (Supply Chain)
     - Schadensfälle bei Versicherungen
