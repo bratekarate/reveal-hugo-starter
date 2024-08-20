@@ -66,8 +66,8 @@ Referent: Felix Jian, Full Stack Engineer
 ## Der Anfang
 ### Exkurs in die Historie von Git
 - Entwicklung des Linux-Kernels benötigte ein **Versionskontrollsystem** (Version Control System, ***VCS***)
-- 2002: Lösung -- Bitkeeper, ein proprietäres **verteiltes VCS** (Distributed VCS, ***DVCS***)
-- 2005: Widerrufen der Erlaubnis, Bitkeeper kostenlos zu verwenden
+- 2002: Lösung -- BitKeeper, ein proprietäres **verteiltes VCS** (Distributed VCS, ***DVCS***)
+- 2005: Widerrufen der Erlaubnis, BitKeeper kostenlos zu verwenden
 - 2005: Linus Torvalds entwickelt als Lösung das DVCS Git
 
 ---
@@ -244,53 +244,104 @@ Three-Way-Merge mit C4 (*master*), C5 (*iss53*) sowie C2 (gemeinsamer Vorgänger
     - **Zusammenführung** von zwei Branches mit gemeinsamem Vorgänger
     - Die Snapshots der Trees beider Commits werden **in einem neuen Tree zusammengeführt**
 
----
-
-## Test
-
-- xyz
-- testas askldjaskldjaskldjaskldjaklsdjasjlkdsakljaskdasjkl lkas djkalsj askl
-- [http://maps.google.com](google.com)
-{ class="fragment" style="display: list-item"}
-
-- <div class="line">test</div>
-{ class="fragment" style="display: list-item"}
-
-<div class="fragment">
-
-```sh{}
-git commit -m 'test'
-git commit -m 'test'
-```
-
-</div>
-
----
-
-## Grundlagen 2
-
----
-
-## Grundlagen 3
-
 {{% /section %}}
 
 ---
 
 {{% section %}}
 
-## Rebase etc
+## Git Command Line
 
 ---
 
-## Rebase 2
+## Git Commands
+<div class="fragment">
+
+- **Porcelain**
+    - *High-level*-Commands für typische Use-Cases
+    - Beispiele:
+        - git status
+        - git add
+        - git commit
+        - git push
+        - git pull
+        - git log
+        - git branch
+
+</div>
+<div class="fragment">
+
+- **Plumbing**
+    - *Low-level*-Commands für interne Inspektion und Manipulation
+    - Beispiele:
+        - git cat-file
+        - git rev-parse
+        - git name-rev
+        - git hash-object
+
+</div>
 
 ---
 
-## Rebase 3
+## Das .git Verzeichnis
+- Git speichert interne Daten in einer Verzeichnisstruktur.
+    - Mit Standardprogrammen wie `ls` erkundbar
+    - Allerdings oft nicht lesbar, da binär
+<div class="fragment">
+
+- Einige wichtige Git-Verzeichnisse und Dateien:
+   - `HEAD`: hält den Namen des aktuellen Branches
+   - `objects`: enthält die binären Git-Objekte, nach Hash strukturiert
+   - `refs`: bildet Branchnamen auf Hashes ab (lokal und remote)
+   - `config`: bildet Branchnamen auf Hashes ab (lokal und remote)
+   - `logs`: enthält die Logs der verschiedenen Branches
+
+</div>
 
 ---
 
-## Rebase 4
+## Das .git Verzeichnis (2)
+- Die grundlegendsten Analyseprogramme für Git: `ls` und `cat`
+
+<div class="fragment">
+
+- Aktuellen Branch ausgeben:
+```sh
+cat .git/HEAD
+```
+</div>
+<div class="fragment">
+
+- Commit mit dem Hash <HASH> finden:
+```sh
+ls .git/objects/<ERSTE_2_STELLEN_DES_HASHES>/<REST_DES_HASHES>
+```
+z.B.
+```sh
+ls .git/objects/25/be3b47e180f79e4e93d1f2af63a9d2401b92e1
+```
+</div>
+<div class="fragment">
+
+- Objekte lesen, z.B. mit `cat`: Nicht möglich, da binär
+    - --> Hex-Dump wie z.B. `xxd` kann verwendet werden
+    - Dennoch nicht wirklich menschenlesbar
+
+</div>
+
+---
+
+## Plumbing Commands
+
+- Werden selten benötigt
+- Einige jedoch hilfreich zum Verständnis:
+```sh{1|2,3|4,5|6}
+git cat-file -p <HASH>  # Daten eines Git-Hashes ausgeben.
+git rev-parse           # Hash einer Revisionsspezifikation (z.B. HEAD)
+                        #   ausgeben.
+git name-rev            # Lesbaren Namen aus Hash einer
+                        #   Revisionsspezifikation anzeigen.
+git hash-object         # Hash aus einem Objekt (z.B. Datei) erzeugen.
+```
 
 {{% /section %}}
