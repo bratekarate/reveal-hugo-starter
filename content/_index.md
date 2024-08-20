@@ -19,25 +19,6 @@ Referent: Felix Jian, Full Stack Engineer
 
 ---
 
-{{% section %}}
-
-## Organisatorisches
-
----
-
-## Schulungsziele
-
-- Verwendung von Git über die **Kommandozeile**
-- **Pull-Requests** und **direktes Einchecken** mit Git
-- Umgang mit rückständigen **Remote-Branches**
-- Vermeidung von Fehlern mit **Git-Rebase**
-- Anwendung von **Cherry-Picking**-Techniken
-- Zielgerichtete Untersuchung der **Git-Historie**
-- Nutzung von **Bitbucket** als zentrales Repository der Commerzbank
-- *(Besonderheiten bei der Verwendung von **Git auf Windows**)*
-
----
-
 ## Ablauf
 
 | Uhrzeit | Thema |
@@ -50,8 +31,6 @@ Referent: Felix Jian, Full Stack Engineer
 | 15:15 | Pause |
 | 15:30 | Git in der Technologielandschaft der Commerzbank |
 | 17:00 | Schulungsende |
-
-{{% /section %}}
 
 ---
 
