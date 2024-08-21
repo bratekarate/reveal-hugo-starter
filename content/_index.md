@@ -316,19 +316,76 @@ ls .git/objects/25/be3b47e180f79e4e93d1f2af63a9d2401b92e1
 
 ---
 
+## Porcelain Commands
+
+```sh{}
+# Abfragen
+git status          # Status des Repositories zusammenfassen.
+git log             # Historie des Repositories anzeigen. 
+
+# Ändern
+git add             # Lesbaren Namen aus Hash einer Revisionsspezifikation
+git commit          # Lesbaren Namen aus Hash einer Revisionsspezifikation
+git restore         # Hash aus einem Objekt (z.B. Datei) erzeugen.
+
+# Abzweigen
+git switch          # Hash aus einem Objekt (z.B. Datei) erzeugen.
+git branch          # test
+
+# Vereinigen
+git merge           # test
+git rebase          # test
+git cherry-pick     # test
+
+# Sync
+git push            # Hash aus einem Objekt (z.B. Datei) erzeugen.
+git fetch           # Hash aus einem Objekt (z.B. Datei) erzeugen.
+git pull            # Hash aus einem Objekt (z.B. Datei) erzeugen.
+```
+
+---
+
+## Porcelain Commands
+
+|   |   |   |
+| - | - | - |
+| <span class="code-table-highlight">Abfragen</span> |
+| `git status` | Status des Repositories zusammenfassen. |
+| `git log` | Historie einer Revision (z.B. Branch oder Commit) anzeigen.  |
+|
+| <span class="code-table-highlight">Ändern</span> |
+| `git add` | Lesbaren Namen aus Hash einer Revisionsspezifikation |
+| `git commit` | Lesbaren Namen aus Hash einer Revisionsspezifikation |
+| `git restore` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+|
+| <span class="code-table-highlight">Abzweigen</span> |
+| `git switch` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+| `git branch` | test |
+|
+| <span class="code-table-highlight">Vereinigen</span> |
+| `git merge` | test |
+| `git rebase` | test |
+| `git cherry-pick` | test |
+|
+| <span class="code-table-highlight">Synchronisieren</span> |
+| `git push` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+| `git fetch` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+| `git pull` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+{ .code-table }
+
+---
 ## Plumbing Commands
 
 - Werden selten benötigt
 - Einige jedoch hilfreich zum Verständnis:
-```sh{1,2|3-5|6,7|8}
-git cat-file -p <HASH>  # Details eines Git-Objektes für ein Hash
-                        #   ausgeben.
-git rev-parse           # Revisionsspezifikation (z.B. HEAD, master^,
-                        #   HEAD..master) parsen und je nach Optionen
-                        #   als Hash oder menschenlesbar ausgeben.
-git name-rev            # Lesbaren Namen aus Hash einer
-                        #   Revisionsspezifikation anzeigen.
-git hash-object         # Hash aus einem Objekt (z.B. Datei) erzeugen.
+```sh{1|2-4|5,6|7}
+git cat-file        # Details eines Git-Objektes für ein Hash ausgeben.
+git rev-parse       # Revisionsspezifikation (z.B. HEAD, master^, HEAD..master)
+                    #   parsen und je nach Optionen als Hash oder
+                    #   menschenlesbar ausgeben.
+git name-rev        # Lesbaren Namen aus Hash einer Revisionsspezifikation
+                    #   anzeigen.
+git hash-object     # Hash aus einem Objekt (z.B. Datei) erzeugen.
 ```
 
 {{% /section %}}

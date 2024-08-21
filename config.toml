@@ -16,6 +16,7 @@ unsafe = true
 
 [markup.goldmark.parser.attribute]
 block = true
+title = true
 
 [markup.highlight]
 codeFences = false
