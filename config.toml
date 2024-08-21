@@ -1,11 +1,18 @@
-baseURL = 'http://example.org/'
+baseURL = '.'
 languageCode = 'en-us'
 title = 'Git Training'
+
+# Offline site
+uglyURLs = "true"
+relativeURLs = "true"
 
 theme = "reveal-hugo"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+# Offline site
+ xhtml = false
 
 [markup.goldmark.parser.attribute]
 block = true
