@@ -1,5 +1,5 @@
 +++
-title = "Crypto"
+title = "Git Training"
 outputs = ["Reveal"]
 [logo]
 src = "/images/Secondary_Black.svg"
@@ -308,16 +308,24 @@ ls .git/objects/25/be3b47e180f79e4e93d1f2af63a9d2401b92e1
 
 </div>
 
+<div class="fragment">
+
+- Besser geeignet: *Plumbing* Commands wie `git cat-file` oder `git name-rev`.
+
+</div>
+
 ---
 
 ## Plumbing Commands
 
 - Werden selten benötigt
 - Einige jedoch hilfreich zum Verständnis:
-```sh{1|2,3|4,5|6}
-git cat-file -p <HASH>  # Daten eines Git-Hashes ausgeben.
-git rev-parse           # Hash einer Revisionsspezifikation (z.B. HEAD)
+```sh{1,2|3-5|6,7|8}
+git cat-file -p <HASH>  # Details eines Git-Objektes für ein Hash
                         #   ausgeben.
+git rev-parse           # Revisionsspezifikation (z.B. HEAD, master^,
+                        #   HEAD..master) parsen und je nach Optionen
+                        #   als Hash oder menschenlesbar ausgeben.
 git name-rev            # Lesbaren Namen aus Hash einer
                         #   Revisionsspezifikation anzeigen.
 git hash-object         # Hash aus einem Objekt (z.B. Datei) erzeugen.
