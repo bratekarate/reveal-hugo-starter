@@ -279,7 +279,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
     font-size: 1em;
 }
 
-.reveal .code-table td:nth-child(2) {
+.reveal .code-table td:nth-child(1) {
     white-space: nowrap;
 }
 

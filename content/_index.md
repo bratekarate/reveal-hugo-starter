@@ -318,59 +318,62 @@ ls .git/objects/25/be3b47e180f79e4e93d1f2af63a9d2401b92e1
 
 ## Porcelain Commands
 
-```sh{}
+```sh{1-3|5-8|10-12|14-17|19-25}
 # Abfragen
-git status          # Status des Repositories zusammenfassen.
-git log             # Historie des Repositories anzeigen. 
+git status          # Status des lokalen HEADs (aktueller Branch) zusammenfassen.
+git log             # Historie einer Revision im Repository anzeigen.
 
 # Ändern
-git add             # Lesbaren Namen aus Hash einer Revisionsspezifikation
-git commit          # Lesbaren Namen aus Hash einer Revisionsspezifikation
-git restore         # Hash aus einem Objekt (z.B. Datei) erzeugen.
+git add             # Lokale Änderungen in die Staging-Area ablegen.
+git commit          # Änderungen aus der Staging-Area einchecken.
+git restore         # Lokale Änderungen zurücksetzen.
 
 # Abzweigen
-git switch          # Hash aus einem Objekt (z.B. Datei) erzeugen.
-git branch          # test
+git switch          # Wechseln des aktuellen lokalen Branches.
+git branch          # Branches verwalten.
 
 # Vereinigen
-git merge           # test
-git rebase          # test
-git cherry-pick     # test
+git merge           # Änderungen verschiedener Revisionen zusammenführen.
+git rebase          # Änderungen auf eine andere Revisionsbasis umlegen.
+git cherry-pick     # Einzelne Commits auf den aktuellen Branch ziehen.
 
 # Sync
-git push            # Hash aus einem Objekt (z.B. Datei) erzeugen.
-git fetch           # Hash aus einem Objekt (z.B. Datei) erzeugen.
-git pull            # Hash aus einem Objekt (z.B. Datei) erzeugen.
+git fetch           # Aktuellste Daten vom Remote-Repository lesen (wendet
+                    #   keine neuen Änderungen lokal an).
+git pull            # Aktuellste Änderungen des Repote-Repositories im aktuellen
+                    #   Branch anwenden.
+git push            # Lokale Änderungen eines Branches auf das Remote-Repository
+                    #   hochladen.
 ```
 
 ---
 
 ## Porcelain Commands
 
-|   |   |   |
-| - | - | - |
+|   |   |
+| - | - |
 | <span class="code-table-highlight">Abfragen</span> |
-| `git status` | Status des Repositories zusammenfassen. |
-| `git log` | Historie einer Revision (z.B. Branch oder Commit) anzeigen.  |
+| `git status` | Status des lokalen HEADs (aktueller Branch) zusammenfassen. |
+| `git log` | Historie einer Revision im Repository anzeigen. |
 |
 | <span class="code-table-highlight">Ändern</span> |
-| `git add` | Lesbaren Namen aus Hash einer Revisionsspezifikation |
-| `git commit` | Lesbaren Namen aus Hash einer Revisionsspezifikation |
-| `git restore` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+| `git add` | Lokale Änderungen in die Staging-Area ablegen. |
+| `git commit` | Änderungen aus der Staging-Area einchecken. |
+| `git restore` | Lokale Änderungen zurücksetzen. |
 |
 | <span class="code-table-highlight">Abzweigen</span> |
-| `git switch` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
-| `git branch` | test |
+| `git switch` | Wechseln des aktuellen lokalen Branches. |
+| `git branch` | Branches verwalten. |
 |
 | <span class="code-table-highlight">Vereinigen</span> |
-| `git merge` | test |
-| `git rebase` | test |
-| `git cherry-pick` | test |
+| `git merge` | Änderungen verschiedener Revisionen zusammenführen. |
+| `git rebase` | Änderungen auf eine andere Revisionsbasis umlegen. |
+| `git cherry-pick` | Einzelne Commits auf den aktuellen Branch ziehen. |
 |
 | <span class="code-table-highlight">Synchronisieren</span> |
-| `git push` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
-| `git fetch` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
-| `git pull` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+| `git fetch` | Aktuellste Daten vom Remote-Repository lesen (wendet keine neuen Änderungen lokal an). |
+| `git pull` | Aktuellste Änderungen des Repote-Repositories im aktuellen Branch anwenden. |
+| `git push` | Lokale Änderungen eines Branches auf das Remote-Repository hochladen. |
 { .code-table }
 
 ---
@@ -387,5 +390,17 @@ git name-rev        # Lesbaren Namen aus Hash einer Revisionsspezifikation
                     #   anzeigen.
 git hash-object     # Hash aus einem Objekt (z.B. Datei) erzeugen.
 ```
+
+---
+
+## Porcelain Commands
+
+|   |   |
+| - | - |
+| `git cat-file` | Details eines Git-Objektes für ein Hash ausgeben. |
+| `git rev-parse` | Revisionsspezifikation (z.B. HEAD, master^, HEAD..master) parsen und je nach Optionen als Hash oder menschenlesbar ausgeben. |
+| `git name-rev` | Lesbaren Namen aus Hash einer Revisionsspezifikation anzeigen. |
+| `git hash-object` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+{ .code-table }
 
 {{% /section %}}
