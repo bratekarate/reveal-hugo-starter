@@ -234,18 +234,18 @@ Three-Way-Merge mit C4 (*master*), C5 (*iss53*) sowie C2 (gemeinsamer Vorgänger
 ---
 
 ## Git Commands
+
+- Zwei Kategorien vom Commands: *Porcelain* und *Plumbing*
 <div class="fragment">
 
 - **Porcelain**
     - *High-level*-Commands für typische Use-Cases
     - Beispiele:
-        - git status
-        - git add
-        - git commit
-        - git push
-        - git pull
-        - git log
-        - git branch
+        - `git status`
+        - `git add`
+        - `git commit`
+        - `git push`
+        - `git log`
 
 </div>
 <div class="fragment">
@@ -253,12 +253,52 @@ Three-Way-Merge mit C4 (*master*), C5 (*iss53*) sowie C2 (gemeinsamer Vorgänger
 - **Plumbing**
     - *Low-level*-Commands für interne Inspektion und Manipulation
     - Beispiele:
-        - git cat-file
-        - git rev-parse
-        - git name-rev
-        - git hash-object
+        - `git cat-file`
+        - `git rev-parse`
+        - `git name-rev`
+        - `git hash-object`
 
 </div>
+
+---
+
+## Porcelain Commands
+
+```sh{|1-3|5-8|10-12|14-17}
+# Abfragen
+git status          # Status des lokalen HEADs (aktueller Branch) zusammenfassen.
+git log             # Historie einer Revision im Repository anzeigen.
+
+# Ändern
+git add             # Lokale Änderungen in die Staging-Area ablegen.
+git commit          # Änderungen aus der Staging-Area einchecken.
+git restore         # Lokale Änderungen zurücksetzen.
+
+# Abzweigen
+git switch          # Wechseln des aktuellen lokalen Branches.
+git branch          # Branches verwalten.
+
+# Vereinigen
+git merge           # Änderungen verschiedener Revisionen zusammenführen.
+git rebase          # Änderungen auf eine andere Revisionsbasis umlegen.
+git cherry-pick     # Einzelne Commits auf den aktuellen Branch ziehen.
+```
+
+---
+
+## Porcelain Commands (2)
+
+```sh{}
+# Synchronisieren
+git fetch           # Aktuellste Daten vom Remote-Repository lesen (wendet
+                    #   keine neuen Änderungen lokal an).
+git pull            # Aktuellste Änderungen des Repote-Repositories im aktuellen
+                    #   Branch anwenden.
+git push            # Lokale Änderungen eines Branches auf das Remote-Repository
+                    #   hochladen.
+git ls-remote       # Branches vom Remote-Repository lessen und anzeigen.
+```
+
 
 ---
 
@@ -269,11 +309,11 @@ Three-Way-Merge mit C4 (*master*), C5 (*iss53*) sowie C2 (gemeinsamer Vorgänger
 <div class="fragment">
 
 - Einige wichtige Git-Verzeichnisse und Dateien:
-   - `HEAD`: hält den Namen des aktuellen Branches
-   - `objects`: enthält die binären Git-Objekte, nach Hash strukturiert
-   - `refs`: bildet Branchnamen auf Hashes ab (lokal und remote)
-   - `config`: bildet Branchnamen auf Hashes ab (lokal und remote)
-   - `logs`: enthält die Logs der verschiedenen Branches
+   - `HEAD`: Hält den Namen des aktuellen Branches
+   - `objects`: Enthält die binären Git-Objekte, nach Hash strukturiert
+   - `refs`: Bildet Branchnamen auf Hashes ab (lokal und remote)
+   - `config`: Bildet Branchnamen auf Hashes ab (lokal und remote)
+   - `logs`: Enthält die Logs der verschiedenen Branches
 
 </div>
 
@@ -316,67 +356,6 @@ ls .git/objects/25/be3b47e180f79e4e93d1f2af63a9d2401b92e1
 
 ---
 
-## Porcelain Commands
-
-```sh{1-3|5-8|10-12|14-17|19-25}
-# Abfragen
-git status          # Status des lokalen HEADs (aktueller Branch) zusammenfassen.
-git log             # Historie einer Revision im Repository anzeigen.
-
-# Ändern
-git add             # Lokale Änderungen in die Staging-Area ablegen.
-git commit          # Änderungen aus der Staging-Area einchecken.
-git restore         # Lokale Änderungen zurücksetzen.
-
-# Abzweigen
-git switch          # Wechseln des aktuellen lokalen Branches.
-git branch          # Branches verwalten.
-
-# Vereinigen
-git merge           # Änderungen verschiedener Revisionen zusammenführen.
-git rebase          # Änderungen auf eine andere Revisionsbasis umlegen.
-git cherry-pick     # Einzelne Commits auf den aktuellen Branch ziehen.
-
-# Sync
-git fetch           # Aktuellste Daten vom Remote-Repository lesen (wendet
-                    #   keine neuen Änderungen lokal an).
-git pull            # Aktuellste Änderungen des Repote-Repositories im aktuellen
-                    #   Branch anwenden.
-git push            # Lokale Änderungen eines Branches auf das Remote-Repository
-                    #   hochladen.
-```
-
----
-
-## Porcelain Commands
-
-|   |   |
-| - | - |
-| <span class="code-table-highlight">Abfragen</span> |
-| `git status` | Status des lokalen HEADs (aktueller Branch) zusammenfassen. |
-| `git log` | Historie einer Revision im Repository anzeigen. |
-|
-| <span class="code-table-highlight">Ändern</span> |
-| `git add` | Lokale Änderungen in die Staging-Area ablegen. |
-| `git commit` | Änderungen aus der Staging-Area einchecken. |
-| `git restore` | Lokale Änderungen zurücksetzen. |
-|
-| <span class="code-table-highlight">Abzweigen</span> |
-| `git switch` | Wechseln des aktuellen lokalen Branches. |
-| `git branch` | Branches verwalten. |
-|
-| <span class="code-table-highlight">Vereinigen</span> |
-| `git merge` | Änderungen verschiedener Revisionen zusammenführen. |
-| `git rebase` | Änderungen auf eine andere Revisionsbasis umlegen. |
-| `git cherry-pick` | Einzelne Commits auf den aktuellen Branch ziehen. |
-|
-| <span class="code-table-highlight">Synchronisieren</span> |
-| `git fetch` | Aktuellste Daten vom Remote-Repository lesen (wendet keine neuen Änderungen lokal an). |
-| `git pull` | Aktuellste Änderungen des Repote-Repositories im aktuellen Branch anwenden. |
-| `git push` | Lokale Änderungen eines Branches auf das Remote-Repository hochladen. |
-{ .code-table }
-
----
 ## Plumbing Commands
 
 - Werden selten benötigt
@@ -390,17 +369,35 @@ git name-rev        # Lesbaren Namen aus Hash einer Revisionsspezifikation
                     #   anzeigen.
 git hash-object     # Hash aus einem Objekt (z.B. Datei) erzeugen.
 ```
+{{% /section %}}
 
 ---
 
-## Porcelain Commands
+{{% section %}}
+
+## Literaturhinweise
 
 |   |   |
 | - | - |
-| `git cat-file` | Details eines Git-Objektes für ein Hash ausgeben. |
-| `git rev-parse` | Revisionsspezifikation (z.B. HEAD, master^, HEAD..master) parsen und je nach Optionen als Hash oder menschenlesbar ausgeben. |
-| `git name-rev` | Lesbaren Namen aus Hash einer Revisionsspezifikation anzeigen. |
-| `git hash-object` | Hash aus einem Objekt (z.B. Datei) erzeugen. |
+| Lokale Git Hilfe | Command: `git help git` |
+| Git Dokumentation | [https://git-scm.com/doc](https://git-scm.com/doc) |
+| Git Referenz | [https://git-scm.com/docs](https://git-scm.com/docs) |
+| Git Commands | [https://git-scm.com/docs/git#_git_commands](https://git-scm.com/docs/git#_git_commands) |
+| Pro Git Book | [https://git-scm.com/book/de/v2](https://git-scm.com/book/de/v2) |
+| Cheatsheet (interaktiv) | [https://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;](https://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;) |
+| GitHub Cheatsheet | [https://training.github.com/downloads/github-git-cheat-sheet/](https://training.github.com/downloads/github-git-cheat-sheet/) |
+| GitHub Cheatsheet PDF | [https://training.github.com/downloads/github-git-cheat-sheet.pdf](https://training.github.com/downloads/github-git-cheat-sheet.pdf) |
+| Git Commands nach Relevanz | [https://blog.git-init.com/git-commands-to-learn-by-heart/](https://blog.git-init.com/git-commands-to-learn-by-heart/) |
+{ .code-table }
+
+---
+
+## Bildquellen
+
+|   |   |
+| - | - |
+| Pro Git Book | [https://git-scm.com/book/de/v2](https://git-scm.com/book/de/v2) |
+|
 { .code-table }
 
 {{% /section %}}
